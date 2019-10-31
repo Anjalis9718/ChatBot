@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+<html>
+    <head>
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-1.8.0.min.js"></script>
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+
+
+
+                <script type='text/javascript'>
+
+
+              $(document).bind('submit','#input', function(e) {
+                e.preventDefault();
+                    $.ajax({
+                      type:'POST',
+                       url:'/checkintime/',
+                       data: {'mydata': $('#posttext').val(), 'csrfmiddlewaretoken': '{{ csrf_token }}'},
+                       success: function (data,textStatus) {
+                         if(data){
+                           var user = document.getElementById("posttext").value;
+                          document.getElementById("posttext").value = "";
+
+                         //alert(data, textStatus);
+
+                         $('#output').append('<div style="text-align:left;"></br><img src="{% static "images/USER.png" %}" style="width:40px;height:40px;"><span style="border:2px ;border-radius: 16px;border-style: double;border-color:#bbb;background-color: #bbb;padding-top: 10px;padding-right: 5px;padding-bottom: 10px;padding-left: 5px;">USER:'+user+'</span></div></br>');
+                         $('#output').append('<p style="text-align:right;"><span style="border:2px black solid;border-radius: 16px;border-style: double;border-color:#bbb;background-color: #fff;padding-top: 10px;padding-right: 5px;padding-bottom: 10px;">'+data+'</span><img src="{% static "images/bot.png" %}" style="width:40px;height:40px;"></p>');
+                        }
+                      },
+
+
+
+
+
+
+                     error:function(){
+                       alert('Not a flight no')
+                     }
+
+
+                  })
+
+              })
+  </script>
+    <style>
+    div.fixed {
+      width: 100%;
+      height: 50px;
+      margin-bottom:17px;
+      padding:  0em 1em;
+  border-radius: 16px;
+  font-size: 20px;
+
+}
+</style>
+</head>
+    <body style="position: absolute;background-color:#FAEBD7;min-height: 400px;margin-bottom: 100px;margin-top: 100px;margin-left: 350px;margin-right: 350px;clear: both;">
+    <header style="color:white;position: fixed;
+   left: 0;
+   top: 0;
+   width:100%;
+   text-align: center;">
+       <img src="{% static "images/air-india.jpg" %}" style="width:100px;height:100px;"></a>
+       <img src="{% static "images/logo.png" %}" style="width:200px;height:100px;"></a>
+
+
+
+
+     </header>
+      <div id="output">
+      <p style="text-align: right;padding:10px;"><span style="border:2px black solid;border-radius: 16px;border-style: double;border-color:#bbb;background-color: #fff;padding-top: 10px;padding-right: 5px;padding-bottom: 10px;padding-left: 5px;"><br>Hey, tell me your flight for the check-in timing of the flight.</span><img src="{% static "images/bot.png" %}" style="width:40px;height:40px;"></p>
+
+      </div>
+
+      <div class="fixed">
+
+    <form method="POST" id=chatBox  >
+       {{form.as_table}}
+      {% csrf_token %}
+      <input type="submit" class="btn-btn-primary" value="SEND"  >
+
+
+
+
+
+  </div>
+
+    </form>
+    <footer style="color:white;position: fixed;background-color:black;
+   left: 0;
+   bottom: 0;
+   width:100%;
+   text-align: center;"">
+    <p>Developed by: Anjali</p>
+    <p>Contact information: <a href="mailto:anjalis9718@gmail.com">
+    anjalis9718@gmail.com</a>.</p>
+    </footer>
+
+
+
+
+</body>
+</html>

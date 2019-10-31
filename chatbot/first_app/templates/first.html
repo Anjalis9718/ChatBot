@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+    <head>
+        <title>
+            HOME
+        </title>
+        <style>
+
+        </style>
+        <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+    </head>
+
+    <body style="background-color:#FAEBD7;margin:10px 10px 10px 10px;min-height: 400px;
+   margin-bottom: 100px;
+   margin-top: 100px;
+
+   clear: both;">
+
+   <header style="color:white;position: fixed;
+   left: 0;
+   top: 0;
+   width:100%;
+   text-align: center;">
+       <img src="{% static "images/air-india.jpg" %}" style="width:100px;height:100px;"></a>
+
+
+         <a><img src="{% static "images/logo.png" %}" style="width:200px;height:100px;"></a>
+
+
+
+     </header>
+
+
+
+        <h2 style="text-align:center;"> What is your query?? </h2>
+        <h3 style="text-align:center;"> I will try to help you. </h3>
+        <button type="button" class="btn btn-primary" onclick="location.href='{% url 'script' %}'"><span class="cui-contrast">Flight Status</button></br>
+        I will help you to check the status of your flight...<hr>
+        <button type="button" class="btn btn-primary" onclick="location.href='{% url 'TicketConfirm' %}'"><span class="cui-contrast">Ticket Confirmation</span> </button><br>
+         I will help you with checking your ticket booking confirmation status...<hr>
+        <button type="button" class="btn btn-primary" onclick="location.href='{% url 'CheckInTime' %}'"><span class="cui-contrast">Check-In timing</button><br>
+          I will help you with checking your flight timings.. <hr>
+        <button type="button" class="btn btn-primary" onclick="location.href='{% url 'Other' %}'"><span class="cui-contrast">Other Queries</button><br>
+           Tell me you have any other query ..<hr>
+           <footer style="background-color:black;color:white;position: fixed;
+           left: 0;
+           bottom: 0;
+           width:100%;
+           text-align: center;">
+     <p>Developed by: Anjali</p>
+     <p>Contact information: <a href="mailto:anjalis9718@gmail.com">
+     anjalis9718@gmail.com</a>.</p>
+   </footer>
+ </body>
+
+
+</html>

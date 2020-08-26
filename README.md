@@ -9,3 +9,7 @@ I have used NLP for generating the replies by analyzing the input from the user.
 
 **Sreenshots**
 ![GitHub Logo](/ss/chatbot_ss1.png)
+
+![GitHub Logo](/ss/chatbot_ss2.png)
+
+![GitHub Logo](/ss/chatbot_ss3.png)

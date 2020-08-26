@@ -13,3 +13,7 @@ I have used NLP for generating the replies by analyzing the input from the user.
 ![GitHub Logo](/ss/chatbot_ss2.png)
 
 ![GitHub Logo](/ss/chatbot_ss3.png)
+
+**RUN USING**
+cd chatbot
+python manage.py runserver

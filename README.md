@@ -5,3 +5,7 @@ This chatbot can be used by any **Airline Services** . It has number of features
 A chatbot developed in Django Framework. I have used ajax in javascript, html, bootstrap, css, MySQL and python for developing the product.
 
 I have used NLP for generating the replies by analyzing the input from the user. I have used the fax data from AirIndia website to check the similarity of the query of the text posted by the user to the fax queries.
+
+
+**Sreenshots**
+![GitHub Logo](/ss/chatbot_ss1.png)

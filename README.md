@@ -6,6 +6,11 @@ A chatbot developed in Django Framework. I have used ajax in javascript, html, b
 
 I have used NLP for generating the replies by analyzing the input from the user. I have used the fax data from AirIndia website to check the similarity of the query of the text posted by the user to the fax queries.
 
+**RUN USING**
+
+cd /chatbot
+
+python manage.py runserver
 
 **Sreenshots**
 ![GitHub Logo](/ss/chatbot_ss1.png)
@@ -14,6 +19,4 @@ I have used NLP for generating the replies by analyzing the input from the user.
 
 ![GitHub Logo](/ss/chatbot_ss3.png)
 
-**RUN USING**
-cd chatbot
-python manage.py runserver
+
